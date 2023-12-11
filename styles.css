@@ -35,8 +35,8 @@ body {
 
 /* Estilo da seção do perfil */
 .profile-picture {
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -46,17 +46,18 @@ body {
 }
 
 .profile-name p {
-    font-size: 32px;
+    font-size: 28px;
     color: white;
     margin: 0 auto 5px;
+    
 }
 
 /* Estilo da profissão */
 .profession {
     font-size: 5px;
     color: #9b99991c;
-    text-align: right;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 /* Estilo do container de senha */
@@ -64,9 +65,9 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Segoe UI', sans-serif;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .password-input {
@@ -78,7 +79,7 @@ body {
     padding: 12px 15px;
     text-align: center;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -90,7 +91,9 @@ body {
 }
 
 .password-toggle img {
-    width: 20px;
+    width: 15px;
+    height: 15px;
+    flex-grow: 1;
 }
 
 /* Estilo do botão de login */
@@ -143,7 +146,7 @@ button:hover {
 }
 
 .dark-mode-icon {
-    width: 30px;
+    width: 25px;
     margin-bottom: 5px;
 }
 
