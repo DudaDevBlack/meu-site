@@ -88,7 +88,7 @@ function toggleDarkMode() {
     darkMode = !darkMode;
 
     const body = document.body;
-    const backgroundImageUrl = darkMode ? 'https://res-console.cloudinary.com/dudanet/thumbnails/v1/image/upload/v1701885797/bWlzdC1zdHJlZXQtbGlnaHQtYmxhY2stbWluaW1hbGlzbS13YWxscGFwZXItcHJldmlld19vc3J2dDA=/grid_landscape' : 'https://res-console.cloudinary.com/dudanet/thumbnails/v1/image/upload/v1701885797/Y29sb3JpZG9zLWF6dWlzLWFydGUtZGlnaXRhbC1pbWFnZW0tZGUtZnVuZG9fdWU5ZXBz/grid_landscape';
+    const backgroundImageUrl = darkMode ? 'https://res.cloudinary.com/dudanet/image/upload/t_Banner 16:9/v1701885797/mist-street-light-black-minimalism-wallpaper-preview_osrvt0.jpg' : 'https://res.cloudinary.com/dudanet/image/upload/t_Banner 16:9/v1701841925/coloridos-azuis-arte-digital-imagem-de-fundo_b5hzuf.jpg';
     body.style.backgroundImage = `url('${backgroundImageUrl}')`;
 
     // Alterar estilo dos botões
