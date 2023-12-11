@@ -144,6 +144,3 @@ function createCategoryButtons() {
         categoriesContainer.appendChild(button);
     });
 }
-
-// Chamada da função para criar os botões de categoria
-createCategoryButtons();
