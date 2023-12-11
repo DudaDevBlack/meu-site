@@ -62,7 +62,7 @@ function checkPassword() {
             loginBox.appendChild(newErrorElement);
         }
 
-        errorElement.textContent = 'Dica sobre a senha: Data atual';
+        errorElement.textContent = 'Dica da senha: Data atual';
     }
 }
 
@@ -102,9 +102,7 @@ function toggleDarkMode() {
     const darkModeIcon = document.querySelector('.dark-mode-icon');
     darkModeIcon.src = 'https://cdn-icons-png.flaticon.com/512/5262/5262027.png';
 
-    // Alterar rótulo do modo
-    const modeLabel = document.querySelector('.mode-label');
-    modeLabel.textContent = darkMode ? 'Dark Mode' : 'Light Mode';
+  
 
     // Atualizar a foto de perfil
     const profilePicture = document.getElementById('profile-picture');
