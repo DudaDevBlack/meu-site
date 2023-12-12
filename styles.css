@@ -42,7 +42,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.557); /* Adiciona uma sombra branca */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
 }
 
 .profile-name p {
@@ -132,7 +132,7 @@ button:hover {
 
 /* Estilo do ícone de alternar modo escuro */
 .dark-mode-toggle:hover {
-    filter: brightness(1.2); /* Ajuste o valor conforme necessário para o efeito desejado */
+    filter: brightness(1.2);
 }
 
 .dark-mode-toggle {
@@ -170,7 +170,7 @@ button:hover {
 }
 
 .icons-container a:hover img {
-    filter: brightness(1.2); /* Ajuste o valor conforme necessário para o efeito desejado */
+    filter: brightness(1.2);
 }
 
 .icons-container a {
@@ -191,17 +191,15 @@ button:hover {
     align-items: center;
 }
 
-/* Seção do perfil na tela de portfólio */
-.profile-section {
+/* Nova div para centralizar conteúdo */
+.profile-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
 }
-.profile-description h2 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
+
 /* Estilo da descrição "Sou um desenvolvedor..." */
 .profile-description p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -217,8 +215,7 @@ button:hover {
     background-size: cover;
     margin-right: 20px;
     align-items: left;    
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.557); /* Adiciona uma sombra branca */
-
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
 }
 
 .profile-description {
@@ -229,19 +226,21 @@ button:hover {
     text-align: left;
 }
 
+/* Ícones representando tecnologias */
 .technologies-icons {
     display: flex;
     justify-content: center;
-    margin-top: 15px;    
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os ícones quebrem para a próxima linha em telas menores */
+    margin-top: 15px;
 }
 
 .technologies-icons img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
-    /*Adicionaumasombrabranca*/border-radius: 12px;
-   
+    border-radius: 12px;
 }
 
 /* Categorias na tela de portfólio */
@@ -289,9 +288,8 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;    
     border-radius: 5px;
-   
 }
 
 .left-icons-container a:hover {
-    transform: scale(1.2); /* Ajuste o valor conforme necessário para o efeito desejado */
+    transform: scale(1.2);
 }
