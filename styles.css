@@ -27,7 +27,7 @@ body {
 .login-box {
     position: relative;
     background: #ffffff0e;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -76,7 +76,7 @@ body {
 
 #password {
     width: 100%;
-    padding: 9px 15px;
+    padding: 9px 18px;
     text-align: center;
     border-radius: 6px;
     font-size: 12px;
@@ -87,7 +87,7 @@ body {
 .password-toggle {
     position: relative;
     cursor: pointer;
-    margin-left: 10px;
+    margin: 12px;
 }
 
 .password-toggle img {
@@ -98,7 +98,7 @@ body {
 
 /* Estilo do botão de login */
 button {
-    padding: 8px 45px;
+    padding: 8px 48px;
     background: #0078d4;
     color: #fff;
     border: 2px;
