@@ -19,15 +19,16 @@ body {
 /* Estilo da tela de login */
 .login-screen {
     position: fixed;
-    top: 50%;
+    top: 35%;
     left: 50%;
+    
     transform: translate(-50%, -50%);
 }
 
 .login-box {
     position: relative;
     background: #ffffff0e;
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -53,7 +54,7 @@ body {
 }
 
 /* Estilo da profissão */
-.profession {
+.profession {    
     font-size: 5px;
     color: #9b99991c;
     text-align: center;
@@ -207,15 +208,19 @@ button:hover {
 
 /* Nova seção após o login */
 .profile-picture-small {
+   
     width:80px;
     height: 80px;
     border-radius: 50%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    align-items: center;    
+    align-items: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .profile-description {
