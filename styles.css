@@ -209,8 +209,8 @@ button:hover {
 /* Nova seção após o login */
 .profile-picture-small {
    
-    width:90px;
-    height: 90px;
+    width:110px;
+    height:110px;
     border-radius: 50%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
