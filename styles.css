@@ -207,8 +207,8 @@ button:hover {
 
 /* Nova seção após o login */
 .profile-picture-small {
-    width: 100px;
-    height: 100px;
+    width:60px;
+    height: 60px;
     border-radius: 50%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -223,6 +223,7 @@ button:hover {
     color: rgb(255, 255, 255);
     font-size: 20px;
     margin: 0;
+    
     text-align: center;
 }
 
