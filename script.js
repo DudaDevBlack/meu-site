@@ -1,5 +1,3 @@
-// Script JavaScript
-
 // Função para lidar com a tecla Enter
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
@@ -101,8 +99,6 @@ function toggleDarkMode() {
     // Alterar estilo do ícone
     const darkModeIcon = document.querySelector('.dark-mode-icon');
     darkModeIcon.src = 'https://cdn-icons-png.flaticon.com/512/5262/5262027.png';
-
-  
 
     // Atualizar a foto de perfil
     const profilePicture = document.getElementById('profile-picture');
