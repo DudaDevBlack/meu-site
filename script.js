@@ -138,3 +138,33 @@ function createCategoryButtons() {
         categoriesContainer.appendChild(button);
     });
 }
+
+// Adicione ao final do script.js
+function showProjectsMenu() {
+    const projectsMenu = document.querySelector('.projects-menu');
+    projectsMenu.style.display = 'flex';
+}
+
+function navigateToProject(url) {
+    const projectContent = document.querySelector('.project-content');
+    projectContent.innerHTML = ''; // Limpa o conteúdo anterior, se houver
+
+    // Carrega o conteúdo do projeto usando AJAX ou outra técnica
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            projectContent.innerHTML = html;
+            showProjectContent();
+        })
+        .catch(error => console.error('Erro ao carregar o projeto:', error));
+}
+
+function showProjectContent() {
+    const loginScreen = document.querySelector('.login-screen');
+    const projectsMenu = document.querySelector('.projects-menu');
+    const projectContent = document.querySelector('.project-content');
+
+    loginScreen.style.display = 'none';
+    projectsMenu.style.display = 'none';
+    projectContent.style.display = 'block';
+}
