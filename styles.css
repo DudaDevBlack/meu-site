@@ -1,3 +1,6 @@
+/* Estilos gerais */
+
+/* Configurações básicas do corpo da página */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -6,12 +9,14 @@ body {
     background-size: cover;
 }
 
+/* Z-index para elementos específicos */
 .login-screen,
 .icons-container,
 .dark-mode-toggle {
     z-index: 1;
 }
 
+/* Estilo da tela de login */
 .login-screen {
     position: fixed;
     top: 35%;
@@ -28,6 +33,7 @@ body {
     text-align: center;
 }
 
+/* Estilo da seção do perfil */
 .profile-picture {
     width: 100px;
     height: 100px;
@@ -45,13 +51,15 @@ body {
     margin: 0 auto 5px;
 }
 
+/* Estilo da profissão */
 .profession {
-    font-size: 5px;
-    color: #9b99991c;
+    font-size: 18px;
+    color: rgba(208, 208, 208, 0.878);
     text-align: center;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 
+/* Estilo do container de senha */
 .password-container {
     position: relative;
     display: flex;
@@ -74,6 +82,7 @@ body {
     margin: 0;
 }
 
+/* Estilo do botão de mostrar/esconder senha */
 .password-toggle {
     position: relative;
     cursor: pointer;
@@ -86,6 +95,7 @@ body {
     flex-grow: 1;
 }
 
+/* Estilo do botão de login */
 button {
     padding: 8px 48px;
     background: #0078d4;
@@ -106,17 +116,20 @@ button:hover {
     border: 2px solid #0078d4;
 }
 
+/* Mensagem de erro */
 .error-message {
     color: #c6b1b1;
     margin-top: 10px;
 }
 
+/* Mensagem de carregamento */
 .loading-message {
     display: none;
     color: white;
     font-size: 20px;
 }
 
+/* Estilo do ícone de alternar modo escuro */
 .dark-mode-toggle:hover {
     filter: brightness(1.2);
 }
@@ -141,6 +154,7 @@ button:hover {
     font-size: 12px;
 }
 
+/* Ícones no canto inferior direito */
 .icons-container {
     position: fixed;
     bottom: 20px;
@@ -167,12 +181,16 @@ button:hover {
     height: 29px;
 }
 
+/* Estilos específicos para a tela de portfólio */
+
+/* Layout da tela de portfólio */
 .portfolio-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Nova div para centralizar conteúdo */
 .profile-container {
     display: flex;
     flex-direction: column;
@@ -181,6 +199,12 @@ button:hover {
     margin-bottom: 10px;
 }
 
+/* Estilo da descrição "Sou um desenvolvedor..." */
+.profile-description p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Nova seção após o login */
 .profile-picture-small {
     width: 110px;
     height: 110px;
@@ -204,11 +228,12 @@ button:hover {
     text-align: center;
 }
 
+/* Ícones representando tecnologias */
 .technologies-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os ícones quebrem para a próxima linha em telas menores */
     margin-top: 10px;
 }
 
@@ -220,6 +245,7 @@ button:hover {
     border-radius: 12px;
 }
 
+/* Categorias na tela de portfólio */
 .categories {
     display: flex;
     gap: 20px;
@@ -241,6 +267,7 @@ button:hover {
     border: 2px solid #0078d4;
 }
 
+/* Ícones no canto inferior esquerdo */
 .left-icons-container {
     position: fixed;
     bottom: 20px;
@@ -269,45 +296,47 @@ button:hover {
     transform: scale(1.2);
 }
 
-.projects-button {
-    cursor: pointer;
+/* Estilo do menu de projetos */
+.projects-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff0e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+.project-button {
+    padding: 10px;
     background: #0078d4;
     color: #fff;
     border: none;
     border-radius: 6px;
     font-size: 16px;
-    padding: 10px;
-    margin-top: 20px;
-    transition: background 0.3s ease, border 0.3s ease;
-}
-
-.projects-button:hover {
-    background: #005a9e;
-}
-
-.projects-menu {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.projects-menu button {
-    background: #0078d4;
-    border: none;
-    border-radius: 6px;
-    margin: 5px;
-    padding: 10px;
     cursor: pointer;
     transition: background 0.3s ease, border 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.projects-menu button:hover {
+.project-button:hover {
     background: #005a9e;
+    border: 2px solid #0078d4;
 }
 
-.projects-menu button img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+/* Estilo do conteúdo do projeto */
+.project-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff0e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
 }
