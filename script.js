@@ -143,6 +143,8 @@ function createCategoryButtons() {
 function showProjectsMenu() {
     const projectsMenu = document.querySelector('.projects-menu');
     projectsMenu.style.display = 'flex';
+    document.getElementById("quem-sou-eu").style.display = "none";
+    document.getElementById("icons-container").style.display = "none";
 }
 
 function navigateToProject(url) {
