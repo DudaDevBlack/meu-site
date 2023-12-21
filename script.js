@@ -151,7 +151,7 @@ function showProjectsMenu() {
 
     // Adicionar botão "Voltar"
     const backButton = document.createElement('button');
-    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_voltar-removebg-preview_tkvpv0.png" alt="Voltar">';
+    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1703184961/voltar_seta_kievfj.png" alt="Voltar">';
     backButton.addEventListener('click', () => {
         showProfileAndTechnologies();
     });
