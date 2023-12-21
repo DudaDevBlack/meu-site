@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <title>Eduardo J.F. da Silva</title>
 </head>
-3
 
 <body>
     <!-- Tela de login -->
@@ -85,22 +84,23 @@
         <div class="projects-button" onclick="showProjectsMenu()">
             <button onclick="checkPassword()">PROJETOS</button>
         </div>
+<!-- Menu de Projetos -->
+<div class="projects-menu" style="display: none;">
+    <button class="project-button" onclick="navigateToProject('Descrição do Projeto 1')">
+        <img src="https://res.cloudinary.com/dudanet/image/upload/v1702186192/icon_js-removebg-preview_1_mrbi10.png" alt="Projeto 1">
+    </button>
+    <button class="project-button" onclick="navigateToProject('Descrição do Projeto 2')">
+        <img src="https://res.cloudinary.com/dudanet/image/upload/v1702186192/icon_js-removebg-preview_1_mrbi10.png" alt="Projeto 2">
+    </button>
+    <button class="project-button" onclick="navigateToProject('Descrição do Projeto 3')">
+        <img src="https://res.cloudinary.com/dudanet/image/upload/v1702186192/icon_js-removebg-preview_1_mrbi10.png" alt="Projeto 3">
+    </button>
+    <button class="project-button" onclick="navigateToProject('Descrição do Projeto 4')">
+        <img src="https://res.cloudinary.com/dudanet/image/upload/v1702186192/icon_js-removebg-preview_1_mrbi10.png" alt="Projeto 4">
+    </button>
+</div>
 
-        <!-- Menu de Projetos -->
-        <div class="projects-menu" style="display: none;">
-            <button onclick="navigateToProject('Descrição do Projeto 1')">
-                <img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_github-removebg-preview_1_xh142o.png" alt="Projeto 1">
-            </button>
-            <button onclick="navigateToProject('Descrição do Projeto 2')">
-                <img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_github-removebg-preview_1_xh142o.png" alt="Projeto 2">
-            </button>
-            <button onclick="navigateToProject('Descrição do Projeto 3')">
-                <img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_github-removebg-preview_1_xh142o.png" alt="Projeto 3">
-            </button>
-            <button onclick="navigateToProject('Descrição do Projeto 4')">
-                <img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_github-removebg-preview_1_xh142o.png" alt="Projeto 4">
-            </button>
-        </div>
+       
 
         <!-- Descrição do Projeto -->
         <div id="project-description" style="display: none;"></div>
