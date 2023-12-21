@@ -297,46 +297,19 @@ button:hover {
 }
 
 /* Estilo do menu de projetos */
+/* Estilo do menu de projetos */
 .projects-menu {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #ffffff0e;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .project-button {
-    padding: 10px;
-    background: #0078d4;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease, border 0.3s ease;
-    margin-bottom: 10px;
-}
+    flex: 1 0 calc(50% - 20px); /* Duas colunas, ajustável conforme necessário */
+    margin: 10px;
+    max-width: 120px; /* Ajuste conforme necessário */
 
-.project-button:hover {
-    background: #005a9e;
-    border: 2px solid #0078d4;
-}
-
-/* Estilo do conteúdo do projeto */
-.project-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #ffffff0e;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: none;
+    /* Adicione as seguintes regras para ajustar o tamanho dos botões */
+    padding: 10px; /* Ajuste conforme necessário */
+    font-size: 16px; /* Ajuste conforme necessário */
 }
