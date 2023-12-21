@@ -142,31 +142,39 @@ function createCategoryButtons() {
 // Adicione ao final do script.js
 function showProjectsMenu() {
     const projectsMenu = document.querySelector('.projects-menu');
+    const projectDescription = document.getElementById('project-description');
+    const backButton = document.createElement('button');
+    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_voltar-removebg-preview_tkvpv0.png" alt="Voltar">';
+    backButton.addEventListener('click', goBack);
+
     projectsMenu.style.display = 'flex';
+    projectDescription.style.display = 'none';
     document.getElementById("quem-sou-eu").style.display = "none";
-    document.getElementById("icons-container").style.display = "none";
+    document.getElementById("technologies-icons").style.display = "none";
+    projectsMenu.appendChild(backButton);
 }
 
-function navigateToProject(url) {
-    const projectContent = document.querySelector('.project-content');
-    projectContent.innerHTML = ''; // Limpa o conteúdo anterior, se houver
+function navigateToProject(description) {
+    const projectsMenu = document.querySelector('.projects-menu');
+    const projectDescription = document.getElementById('project-description');
 
-    // Carrega o conteúdo do projeto usando AJAX ou outra técnica
-    fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            projectContent.innerHTML = html;
-            showProjectContent();
-        })
-        .catch(error => console.error('Erro ao carregar o projeto:', error));
-}
+    projectsMenu.style.display = 'none';
+    projectDescription.style.display = 'block';
+    projectDescription.innerHTML = `<p>${description}</p>`;
+    // Adicione aqui lógica adicional para carregar o conteúdo do projeto, se necessário
+}F
 
-function showProjectContent() {
+// Função para voltar à tela de projetos
+function goBack() {
     const loginScreen = document.querySelector('.login-screen');
     const projectsMenu = document.querySelector('.projects-menu');
-    const projectContent = document.querySelector('.project-content');
+    const projectDescription = document.getElementById('project-description');
 
     loginScreen.style.display = 'none';
-    projectsMenu.style.display = 'none';
-    projectContent.style.display = 'block';
+    projectsMenu.style.display = 'flex';
+    projectDescription.style.display = 'none';
+
+    // Mostrar novamente a foto de perfil e os ícones das tecnologias
+    document.getElementById("profile-picture").style.display = "block";
+    document.getElementById("technologies-icons").style.display = "block";
 }
