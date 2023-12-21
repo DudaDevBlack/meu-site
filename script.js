@@ -142,39 +142,42 @@ function createCategoryButtons() {
 // Adicione ao final do script.js
 function showProjectsMenu() {
     const projectsMenu = document.querySelector('.projects-menu');
-    const projectDescription = document.getElementById('project-description');
-    const backButton = document.createElement('button');
-    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_voltar-removebg-preview_tkvpv0.png" alt="Voltar">';
-    backButton.addEventListener('click', goBack);
+    const profileContainer = document.querySelector('.profile-container');
+    const technologiesIcons = document.querySelector('.technologies-icons');
 
     projectsMenu.style.display = 'flex';
-    projectDescription.style.display = 'none';
-    document.getElementById("quem-sou-eu").style.display = "none";
-    document.getElementById("technologies-icons").style.display = "none";
-    projectsMenu.appendChild(backButton);
+    profileContainer.style.display = 'none';
+    technologiesIcons.style.display = 'none';
+
+    // Adicionar botão "Voltar"
+    const backButton = document.createElement('button');
+    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_voltar-removebg-preview_tkvpv0.png" alt="Voltar">';
+    backButton.addEventListener('click', () => {
+        showProfileAndTechnologies();
+    });
+    document.body.appendChild(backButton);
+}
+
+function showProfileAndTechnologies() {
+    const profileContainer = document.querySelector('.profile-container');
+    const technologiesIcons = document.querySelector('.technologies-icons');
+    const projectsMenu = document.querySelector('.projects-menu');
+    const backButton = document.querySelector('button');
+
+    profileContainer.style.display = 'flex';
+    technologiesIcons.style.display = 'flex';
+    projectsMenu.style.display = 'none';
+
+    // Remover botão "Voltar"
+    if (backButton) {
+        document.body.removeChild(backButton);
+    }
 }
 
 function navigateToProject(description) {
-    const projectsMenu = document.querySelector('.projects-menu');
     const projectDescription = document.getElementById('project-description');
-
-    projectsMenu.style.display = 'none';
+    projectDescription.textContent = description;
     projectDescription.style.display = 'block';
-    projectDescription.innerHTML = `<p>${description}</p>`;
-    // Adicione aqui lógica adicional para carregar o conteúdo do projeto, se necessário
-}F
 
-// Função para voltar à tela de projetos
-function goBack() {
-    const loginScreen = document.querySelector('.login-screen');
-    const projectsMenu = document.querySelector('.projects-menu');
-    const projectDescription = document.getElementById('project-description');
-
-    loginScreen.style.display = 'none';
-    projectsMenu.style.display = 'flex';
-    projectDescription.style.display = 'none';
-
-    // Mostrar novamente a foto de perfil e os ícones das tecnologias
-    document.getElementById("profile-picture").style.display = "block";
-    document.getElementById("technologies-icons").style.display = "block";
+    showProjectsMenu(); // Mostrar o menu de projetos ao clicar em um projeto
 }
