@@ -20,7 +20,7 @@ body {
 /* Estilo da tela de login */
 .login-screen {
     position: fixed;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -44,6 +44,10 @@ body {
     background-size: cover;
     margin: 0 auto 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .profile-name p {
@@ -207,9 +211,10 @@ button:hover {
 
 /* Nova seção após o login */
 .profile-picture-small {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin-top: 15px;
+    border-radius: 50%;   
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -354,5 +359,24 @@ button:hover {
 
 .left-icons-container img:hover {
     filter: brightness(1.2);
+}
+/* Estilo do rodapé */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #c6b1b1; /* Cor cinza desejada */
+    font-size: 14px;
+}
+
+.footer a {
+    color: #c6b1b1; /* Cor cinza desejada para o link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0078d4; /* Cor desejada ao passar o mouse sobre o link */
 }
 
