@@ -60,7 +60,7 @@ function checkPassword() {
             loginBox.appendChild(newErrorElement);
         }
 
-        errorElement.textContent = 'Dica da senha: Data atual';
+        errorElement.textContent = 'Dica da senha: Data de hoje';
     }
 }
 
