@@ -5,6 +5,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     overflow: hidden;
+    overflow-y: auto;
     background: url('https://res.cloudinary.com/dudanet/image/upload/v1701841925/coloridos-azuis-arte-digital-imagem-de-fundo_b5hzuf.jpg') no-repeat center center fixed;
     background-size: cover;
 }
@@ -252,7 +253,7 @@ button:hover {
 }
 
 .categories button {
-    padding: 10px;
+    padding: 10px 20px;
     background: #0078d4;
     color: #fff;
     border: none;
@@ -264,15 +265,68 @@ button:hover {
 
 .categories button:hover {
     background: #005a9e;
-    border: 2px solid #0078d4;
 }
 
-/* Ícones no canto inferior esquerdo */
+/* Grade de projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Projeto individual */
+.project {
+    background: #ffffff0e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do projeto */
+.project h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Descrição do projeto */
+.project p {
+    color: #c6b1b1;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Tecnologias utilizadas no projeto */
+.project p:last-child {
+    margin-bottom: 20px;
+}
+
+/* Container de vídeo para torná-lo responsivo */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Proporção 16:9 para vídeos do YouTube */
+    margin-bottom: 15px;
+}
+
+/* Vídeo dentro do container responsivo */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adiciona margem à descrição do projeto para separar dos outros elementos */
+.project-description {
+    margin-bottom: 20px;
+}
 .left-icons-container {
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -280,36 +334,25 @@ button:hover {
 
 .left-icons-container a {
     text-decoration: none;
-    transition: transform 0.2s ease-in-out;
 }
 
 .left-icons-container img {
-    width: 35px;
-    height: 35px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 18%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
+    transition: filter 0.3s ease;
+    -webkit-border-radius: 18%;
+    -moz-border-radius: 18%;
+    -ms-border-radius: 18%;
+    -o-border-radius: 18%;
+    -webkit-transition: filter 0.3s ease;
+    -moz-transition: filter 0.3s ease;
+    -ms-transition: filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
 }
 
-.left-icons-container a:hover {
-    transform: scale(1.2);
+.left-icons-container img:hover {
+    filter: brightness(1.2);
 }
 
-/* Estilo do menu de projetos */
-/* Estilo do menu de projetos */
-.projects-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project-button {
-    flex: 1 0 calc(50% - 20px); /* Duas colunas, ajustável conforme necessário */
-    margin: 10px;
-    max-width: 120px; /* Ajuste conforme necessário */
-
-    /* Adicione as seguintes regras para ajustar o tamanho dos botões */
-    padding: 10px; /* Ajuste conforme necessário */
-    font-size: 16px; /* Ajuste conforme necessário */
-}
