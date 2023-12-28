@@ -405,7 +405,7 @@ button:hover {
     padding: 0 20px; /* Adiciona algum espaçamento aos lados para dispositivos maiores */
     font-size: 18px;
     color: #ffffff; 
-    text-shadow: 2px 2px 4px #4a4f49; /* Sombra azul com deslocamento de 2px na horizontal e vertical e espalhamento de 4px */
+    text-shadow: 1px 1px 2px #4a4f49; /* Sombra azul com deslocamento de 2px na horizontal e vertical e espalhamento de 4px */
        
   }
 
