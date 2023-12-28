@@ -44,11 +44,7 @@ body {
     background-size: cover;
     margin: 0 auto 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-}
+   }
 
 .profile-name p {
     font-size: 28px;
@@ -83,7 +79,7 @@ body {
     padding: 9px 18px;
     text-align: center;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
 }
 
@@ -95,8 +91,8 @@ body {
 }
 
 .password-toggle img {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     flex-grow: 1;
 }
 
@@ -105,7 +101,7 @@ button {
     padding: 8px 48px;
     background: #0078d4;
     color: #fff;
-    border: 2px;
+    border: 1px;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
@@ -379,4 +375,3 @@ button:hover {
 .footer a:hover {
     color: #0078d4; /* Cor desejada ao passar o mouse sobre o link */
 }
-
