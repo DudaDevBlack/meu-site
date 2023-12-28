@@ -50,6 +50,7 @@ body {
     font-size: 28px;
     color: white;
     margin: 0 auto 5px;
+    text-shadow: 1px 1px 2px #4a4f49;
 }
 
 /* Estilo da profissão */
@@ -65,7 +66,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Segoe UI', sans-serif;
     margin-bottom: 18px;
 }
@@ -76,7 +77,7 @@ body {
 
 #password {
     width: 100%;
-    padding: 9px 18px;
+    padding: 9px 8px;
     text-align: center;
     border-radius: 6px;
     font-size: 15px;
@@ -85,17 +86,14 @@ body {
 
 /* Estilo do botão de mostrar/esconder senha */
 .password-toggle {
-    position: relative;
-    cursor: pointer;
-    align-items: center;
-    margin: 12px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .password-toggle img {
     width: 18px;
     height: 18px;
-    align-items: center;
-    flex-grow: 1;
 }
 
 /* Estilo do botão de login */
