@@ -1,147 +1,108 @@
-// Função para lidar com a tecla Enter
-function handleKeyPress(event) {
-    if (event.key === 'Enter') {F
-        checkPassword();
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
 
-// Função para mostrar a tela de portfólio e ocultar a tela de login
-function showPortfolioScreen() {
-    const loginScreen = document.querySelector('.login-screen');
-    const portfolioScreen = document.querySelector('.portfolio-screen');
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://res.cloudinary.com/dudanet/image/upload/t_Profile/v1702183214/WhatsApp_Image_2023-12-07_at_16.08.23-removebg-preview_dbqlin.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Eduardo J.F. da Silva</title>
+</head>
 
-    loginScreen.style.display = 'none';
-    portfolioScreen.style.display = 'flex';
-}
+<body>
+    <!-- Tela de login -->
+    <div class="login-screen">
+        <div class="login-box">
+            <!-- Perfil do usuário -->
+            <div class="profile-picture" id="profile-picture" style="background-image: url('https://res.cloudinary.com/dudanet/image/upload/v1701839344/WhatsApp_Image_2023-12-06_at_02.07.25_ddvjjr.jpg');"></div>
+            <div class="profile-name">
+                <p id="profile-name">Eduardo J.</p>
+                <p class="profession"><span style="font-size:18px;color:rgba(208, 208, 208, 0.878);margin-top: 1px">Developer</span></p>
+            </div>
 
-// Função para mostrar o conteúdo da categoria selecionada
-function showCategory(categoryId) {
-    // Esconda todos os conteúdos de categoria
-    const categoryContents = document.querySelectorAll('.category-content');
-    categoryContents.forEach(content => {
-        content.style.display = 'none';
-    });
+            <!-- Entrada de senha -->
+            <div class="password-container">
+                <div class="password-input">
+                    <input type="password" id="password" placeholder="Digite uma senha" onkeypress="handleKeyPress(event)">
+                </div>
+                <div class="password-toggle" onclick="togglePasswordVisibility()">
+                    <img src="https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_ocultar_senha2-removebg-preview_tkvpv0.png" alt="Toggle Password Visibility">
+                </div>
+            </div>
+            <!-- Botão de login -->
+            <button onclick="checkPassword()">Entrar</button>
+            </div>
+    </div>
+    <!-- Ícones no canto inferior direito -->
+    <div class="icons-container">
 
-    // Mostre o conteúdo da categoria selecionada
-    const selectedCategory = document.getElementById(categoryId);
-    if (selectedCategory) {
-        selectedCategory.style.display = 'block';
-    }
-}
+    </div>
+    <!-- Ícone de alternar modo escuro -->
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img src="https://cdn-icons-png.flaticon.com/512/5262/5262027.png" alt="Dark Mode Toggle" class="dark-mode-icon">
+    </div>
+    <div class="footer">
+        &copy; 2023 My Portfolio | Developer <a href="#" target="_blank">Eduardo J.F.da Silva</a>
+    </div>   
+    <!-- Ícones no canto inferior esquerdo -->
+    <div class="left-icons-container">
+        <!-- Ícone do LinkedIn -->
+        <a href="https://br.linkedin.com/in/eduardo-jos%C3%A9-ferreira-da-silva-695198236" target="_blank"><img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_linkdin-removebg-preview_tmx40a.png" alt="LinkedIn"></a>
 
-// Função para verificar a senha
-function checkPassword() {
-    const passwordInput = document.getElementById('password');
-    const enteredPassword = passwordInput.value;
+        <!-- Ícone do WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=5511968489654&text=Ol%C3%A1%20Eduardo,%20tudo%20bem?%20Acabei%20de%20acessar%20seu%20portif%C3%B3lio." target="_blank"><img src="https://res.cloudinary.com/dudanet/image/upload/v1701971518/icon_zap-removebg-preview_etaepy.png" alt="WhatsApp"></a>
 
-    const currentDate = new Date();
-    const day = currentDate.getDate();
-    const month = currentDate.getMonth() + 1;
-    const year = currentDate.getFullYear();
+        <!-- Ícone do GitHub -->
+        <a href="https://github.com/DudaDevBlack" target="_blank"><img src="https://res.cloudinary.com/dudanet/image/upload/v1701971517/icon_github-removebg-preview_1_xh142o.png" alt="GitHub"></a>
+    </div>
+    <!-- Tela de portfólio -->
+    <div class="portfolio-screen" style="display: none;">
 
-    const correctPassword = `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year}`;
+        <!-- Nova div para centralizar conteúdo -->
+        <div class="profile-container">
+            <!-- Perfil do usuário -->
+            <div class="profile-picture-small" style="background-image: url('https://res.cloudinary.com/dudanet/image/upload/v1701976173/favicon2_ryd0qw.jpg');"></div>
+            <div class="profile-description" id="quem-sou-eu">
+                <h2>Quem sou eu</h2>
+                <p>"Como um programador iniciante, minha paixão é desvendar o complexo com simplicidade, transformando desafios em soluções diretas, onde cada linha de código é um passo rumo à elegância da resolução."</p>
+            </div>           
+ 
+    <div class="project">
+      <h2>Processo Seletivo</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed//2hKvKzKtjVA" height="801" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+      </div>
+      <div class="project-info">
+        <p>Sistema de processos seletivo, integrado com MySQL e Flask com captura de dados em tempo real com possibilidade de replicação de múltiplos candidatos efetuando o mesmo processo e todos alimentando uma única fonte de dados, onde eles pode ser analisados externamente pelo recrutador.</p>
+        <p>Tecnologias utilizadas:</p>
+        <div class="technologies-icons">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702096548/icon_python-removebg-preview_blly4g.png" alt="Tecnologia 4">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702096548/icon_c_-removebg-preview_1_cqw8z1.png" alt="Tecnologia 5">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702185098/icon_sql3-removebg-preview_mow6ik.png" alt="Tecnologia 6">
+          </div> 
+      </div>
+    
+    <div class="project">
+        <br>
+      <h2>Buscador multiplataformas</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed//IR9I0VG57jc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p>Descrição do Projeto 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Tecnologias utilizadas:</p>
+      <div class="technologies-icons">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702096548/icon_html5-removebg-preview_1_bwtmop.png" alt="Tecnologia 1">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702096548/icon_css-removebg-preview_itx8bo.png" alt="Tecnologia 2">
+            <img src="https://res.cloudinary.com/dudanet/image/upload/v1702186192/icon_js-removebg-preview_1_mrbi10.png" alt="Tecnologia 3">
+          </div> 
+    </div>
+</div>
+        <!-- Descrição do Projeto -->
+        <div id="project-description" style="display: none;"></div>
+        
+        <!-- Script JavaScript -->
+        <script src="script.js"></script>
+    </div>
+</body>
 
-    const errorElement = document.querySelector('.error-message');
-
-    if (enteredPassword === correctPassword) {
-        // Chama a função para mostrar a tela de portfólio
-        showPortfolioScreen();
-
-        // Clicar no botão F11
-        document.documentElement.requestFullscreen();
-    } else {
-        // Exibir mensagem de erro
-        if (!errorElement) {
-            const loginBox = document.querySelector('.login-box');
-            const newErrorElement = document.createElement('p');
-            newErrorElement.className = 'error-message';
-            newErrorElement.style.color = '#d3d3d3';
-            newErrorElement.style.marginTop = '10px';
-            loginBox.appendChild(newErrorElement);
-        }
-        errorElement.textContent = 'Dica da senha: Data de hoje';
-    }
-}
-
-// Função para alternar a visibilidade da senha
-function togglePasswordVisibility() {
-    const passwordInput = document.getElementById('password');
-    const passwordToggle = document.querySelector('.password-toggle img');
-
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        passwordToggle.src = 'https://res.cloudinary.com/dudanet/image/upload/v1701915178/icon_ver_senha2-removebg-preview_xf8lf1.png';
-    } else {
-        passwordInput.type = 'password';
-        passwordToggle.src = 'https://res.cloudinary.com/dudanet/image/upload/v1701915177/icon_ocultar_senha2-removebg-preview_tkvpv0.png';
-    }
-}
-
-// Variável para controlar o modo escuro
-let darkMode = false;
-
-// Função para alternar o modo escuro
-function toggleDarkMode() {
-    darkMode = !darkMode;
-
-    const body = document.body;
-    const backgroundImageUrl = darkMode ? 'https://res.cloudinary.com/dudanet/image/upload/t_Banner 16:9/v1701885797/mist-street-light-black-minimalism-wallpaper-preview_osrvt0.jpg' : 'https://res.cloudinary.com/dudanet/image/upload/t_Banner 16:9/v1701841925/coloridos-azuis-arte-digital-imagem-de-fundo_b5hzuf.jpg';
-    body.style.backgroundImage = `url('${backgroundImageUrl}')`;
-
-    // Alterar estilo dos botões
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(button => {
-        button.style.backgroundColor = darkMode ? '#333' : '#0078d4';
-        button.style.borderColor = darkMode ? '#666' : '#0078d4';
-    });
-
-    // Alterar estilo do ícone
-    const darkModeIcon = document.querySelector('.dark-mode-icon');
-    darkModeIcon.src = 'https://cdn-icons-png.flaticon.com/512/5262/5262027.png';
-
-    // Atualizar a foto de perfil
-    const profilePicture = document.getElementById('profile-picture');
-    profilePicture.style.backgroundImage = `url('${darkMode ? 'https://res.cloudinary.com/dudanet/image/upload/v1701974234/dark_img_profile_qoh7l9.png' : 'https://res-console.cloudinary.com/dudanet/thumbnails/v1/image/upload/v1701839344/V2hhdHNBcHBfSW1hZ2VfMjAyMy0xMi0wNl9hdF8wMi4wNy4yNV9kZHZqanI=/grid_landscape'}')`;
-}
-
-// Função para fechar a aba (Ctrl + W)
-function closeTab() {
-    window.close();
-}
-
-
-// Adicione ao final do script.js
-function showProjectsMenu() {
-    const projectsMenu = document.querySelector('.projects-menu');
-    const profileContainer = document.querySelector('.profile-container');
-    const technologiesIcons = document.querySelector('.technologies-icons');
-
-    projectsMenu.style.display = 'flex';
-    profileContainer.style.display = 'none';
-    technologiesIcons.style.display = 'none';
-
-   }
-
-function showProfileAndTechnologies() {
-    const profileContainer = document.querySelector('.profile-container');
-    const technologiesIcons = document.querySelector('.technologies-icons');
-    const projectsMenu = document.querySelector('.projects-menu');
-    const backButton = document.querySelector('button');
-
-    profileContainer.style.display = 'flex';
-    technologiesIcons.style.display = 'flex';
-    projectsMenu.style.display = 'none';
-
-    // Remover botão "Voltar"
-    if (backButton) {
-        document.body.removeChild(backButton);
-    }
-}
-
-function navigateToProject(description) {
-    const projectDescription = document.getElementById('project-description');
-    projectDescription.textContent = description;
-    projectDescription.style.display = 'block';
-
-    showProjectsMenu(); // Mostrar o menu de projetos ao clicar em um projeto
-}
+</html>
