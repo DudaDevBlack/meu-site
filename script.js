@@ -1,6 +1,6 @@
 // Função para lidar com a tecla Enter
 function handleKeyPress(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter') {F
         checkPassword();
     }
 }
@@ -59,7 +59,6 @@ function checkPassword() {
             newErrorElement.style.marginTop = '10px';
             loginBox.appendChild(newErrorElement);
         }
-
         errorElement.textContent = 'Dica da senha: Data de hoje';
     }
 }
@@ -110,34 +109,6 @@ function closeTab() {
     window.close();
 }
 
-// Função para criar os botões de categorias
-function createCategoryButtons() {
-    const categoriesContainer = document.querySelector('.categories');
-
-    // Adicione quantos botões de categoria forem necessários
-    const categoriesData = [
-        { id: 'category1', label: 'Categoria 1', image: 'URL_DA_IMAGEM1', url: 'URL_DA_CATEGORIA1' },
-        { id: 'category2', label: 'Categoria 2', image: 'URL_DA_IMAGEM2', url: 'URL_DA_CATEGORIA2' },
-        { id: 'category3', label: 'Categoria 3', image: 'URL_DA_IMAGEM3', url: 'URL_DA_CATEGORIA3' },
-        // Adicione mais categorias conforme necessário
-    ];
-
-    categoriesData.forEach(category => {
-        const button = document.createElement('button');
-        button.innerHTML = `
-            <img src="${category.image}" alt="${category.label}">
-            <span>${category.label}</span>
-        `;
-        button.addEventListener('click', () => {
-            // Chama a função para mostrar o conteúdo da categoria
-            showCategory(category.id);
-            // Adicione aqui a lógica para redirecionar para a URL da categoria
-            window.location.href = category.url;
-        });
-
-        categoriesContainer.appendChild(button);
-    });
-}
 
 // Adicione ao final do script.js
 function showProjectsMenu() {
@@ -149,14 +120,7 @@ function showProjectsMenu() {
     profileContainer.style.display = 'none';
     technologiesIcons.style.display = 'none';
 
-    // Adicionar botão "Voltar"
-    const backButton = document.createElement('button');
-    backButton.innerHTML = '<img src="https://res.cloudinary.com/dudanet/image/upload/v1703675549/voltar_seta-removebg-preview_dspyjx.png" alt="Voltar">';
-    backButton.addEventListener('click', () => {
-        showProfileAndTechnologies();
-    });
-    document.body.appendChild(backButton);
-}
+   }
 
 function showProfileAndTechnologies() {
     const profileContainer = document.querySelector('.profile-container');
