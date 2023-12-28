@@ -87,12 +87,14 @@ body {
 .password-toggle {
     position: relative;
     cursor: pointer;
+    align-items: center;
     margin: 12px;
 }
 
 .password-toggle img {
     width: 18px;
     height: 18px;
+    align-items: center;
     flex-grow: 1;
 }
 
@@ -240,9 +242,9 @@ button:hover {
 }
 
 .technologies-icons img {
-    width: 50px;
-    height: 50px;
-    margin: 2px;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.557);
     border-radius: 12px;
 }
@@ -375,3 +377,30 @@ button:hover {
 .footer a:hover {
     color: #0078d4; /* Cor desejada ao passar o mouse sobre o link */
 }
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ajuste a proporção de acordo com a relação de aspecto do vídeo (altura / largura * 100) */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-info {
+    margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
+    max-width: 560px; /* Largura máxima do texto de descrição */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Adiciona algum espaçamento aos lados para dispositivos maiores */
+  }
+
+  .project-info p {
+    word-wrap: break-word; /* Permite que as palavras quebrem para a próxima linha */
+  }
